@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybel-maa <ybel-maa@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 11:55:13 by ybel-maa          #+#    #+#             */
-/*   Updated: 2025/12/17 11:55:13 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2025/12/19 13:59:58 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void parse_multiple_args(int argc, char **argv, t_stack *a)
 
     while (i > 0)
     {
-        if(!is_number(argv[i]) || !is_overflow(argv[i]))
+        if(!is_number(argv[i]) || !is_overflow(argv[i]) || !check_duplicates(argv[i]))
         {
             free_stack(a);
             print_error();
