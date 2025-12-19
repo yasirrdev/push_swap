@@ -6,17 +6,17 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:10:14 by ybel-maa          #+#    #+#             */
-/*   Updated: 2025/12/12 13:58:55 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2025/12/19 17:05:05 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdlib.h>
-# include <unistd.h>
 # include "../../ft_printf/ft_printf.h"
 # include "../../libft/libft.h"
+# include <stdlib.h>
+# include <unistd.h>
 typedef struct s_node
 {
 	int				value;
@@ -30,35 +30,43 @@ typedef struct s_stack
 	int				size;
 }					t_stack;
 
+t_stack				*stack_init(void);
+void				stack_push_top(t_stack *stack, int value);
+t_node				*node_new(int value);
 
-t_stack *stack_init(void);
-void 	stack_push_top(t_stack *stack, int value);
-t_node	*node_new(int value);
+void				swap_internal(t_stack *s);
+void				push_internal(t_stack *dst, t_stack *src);
+void				rotate_internal(t_stack *s);
+void				reverse_rotate_internal(t_stack *s);
 
-void	swap_internal(t_stack *s);
-void	push_internal(t_stack *dst, t_stack *src);
-void	rotate_internal(t_stack *s);
-void	reverse_rotate_internal(t_stack *s);
+void				sa(t_stack *a);
+void				sb(t_stack *b);
+void				ss(t_stack *a, t_stack *b);
 
-void	sa(t_stack *a);
-void	sb(t_stack *b);
-void	ss(t_stack *a, t_stack *b);
+void				pa(t_stack *a, t_stack *b);
+void				pb(t_stack *a, t_stack *b);
 
-void	pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
+void				ra(t_stack *a);
+void				rb(t_stack *b);
+void				rr(t_stack *a, t_stack *b);
 
-void	ra(t_stack *a);
-void	rb(t_stack *b);
-void	rr(t_stack *a, t_stack *b);
+void				rra(t_stack *a);
+void				rrb(t_stack *b);
+void				rrr(t_stack *a, t_stack *b);
 
-void	rra(t_stack *a);
-void	rrb(t_stack *b);
-void	rrr(t_stack *a, t_stack *b);
+void				push_swap(t_stack *a, t_stack **b);
 
-void	push_swap(t_stack *a, t_stack **b);
+void				print_error(void);
+void				free_stack(t_stack *stack);
 
-void	print_error(void);
-void	free_stack(t_stack *stack);
+int					is_number(char *s);
+int					is_overflow(char *s);
+int					check_duplicates(t_stack *a);
+void				free_split(char **split);
+void				is_sorted(t_stack *a);
 
+t_stack				*parse_args(int argc, char **argv);
+void				parse_string(char *s, t_stack *a);
+void				parse_multiple_args(int argc, char **argv, t_stack *a);
 
 #endif
