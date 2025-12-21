@@ -24,6 +24,33 @@ t_stack *parse_args(int argc, char **argv)
         parse_multiple_args(argc, argv, a);
     return a;
 }
+void	parse_string(char *s, t_stack *a)
+{
+	char	**split;
+	int		i;
+
+	split = ft_split(s, ' ');
+	if (!split || !split[0])
+	{
+		print_error();
+		exit(1);
+	}
+	i = 0;
+	while (split[i])
+		i++;
+	while (--i >= 0)
+	{
+		if (!is_number(split[i]) || !is_overflow(split[i]))
+		{
+			free_split(split);
+			free_stack(a);
+			print_error();
+			exit(1);
+		}
+		stack_push_top(a, ft_atoi(split[i]));
+	}
+	free_split(split);
+}
 void parse_multiple_args(int argc, char **argv, t_stack *a)
 {
     int i;

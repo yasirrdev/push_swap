@@ -75,3 +75,16 @@ int	check_duplicates(t_stack *a)
 	}
 	return (1);
 }
+int is_sorted(t_stack *a)
+{
+    t_node *current;
+
+    current = a->top;
+    while (current && current->next)
+    {
+        if (current->value > current->next->value)
+            return (0);
+        current = current->next;
+    }
+    return (1);
+}
