@@ -69,4 +69,6 @@ t_stack				*parse_args(int argc, char **argv);
 void				parse_string(char *s, t_stack *a);
 void				parse_multiple_args(int argc, char **argv, t_stack *a);
 
+int *stack_to_array(t_stack *a);
+
 #endif
