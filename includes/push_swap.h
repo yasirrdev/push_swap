@@ -34,7 +34,7 @@ t_stack	*stack_init(void);
 t_node	*node_new(int value);
 void	stack_push_top(t_stack *stack, int value);
 void	free_stack(t_stack *stack);
-
+¡
 void	swap_internal(t_stack *s);
 void	push_internal(t_stack *dst, t_stack *src);
 void	rotate_internal(t_stack *s);
@@ -62,8 +62,8 @@ void	parse_multiple_args(int argc, char **argv, t_stack *a);
 int		is_number(char *s);
 int		is_overflow(char *s);
 int		check_duplicates(t_stack *a);
-void free_split(char **split);
 int		is_sorted(t_stack *a);
+void	free_split(char **split);
 void	print_error(void);
 
 int		*stack_to_array(t_stack *a);
@@ -75,10 +75,20 @@ void	sort_three(t_stack *a);
 void	sort_five(t_stack *a, t_stack *b);
 
 int		*compute_lis(int *arr, int size);
+void	init_lis_array(int *len, int *prev, int *mark, int size);
+void	compute_lis(int *arr, int *len, int *prev, int size);
+int		find_lis_end(int *len, size_t size);
+void	mark_lis(int *mark, int *prev, int index);
+
+void	shift_mark(int *mark, int size);
+void	push_non_lis(t_stack *a, t_stack *b, int *mark);
+
 int		find_pos(t_stack *a, int target);
+int		find_min(t_stack *a);
+int		find_target_pos(t_stack *a, int target);
 void	rotate_to_top(t_stack *a, int pos);
-void	sort_lis(t_stack *a, t_stack *b);
+
+void	insert_back(t_stack *a, t_stack *b);
+void	final_rotate(t_stack *a);
 
 void	push_swap(t_stack *a, t_stack *b);
-
-#endif
