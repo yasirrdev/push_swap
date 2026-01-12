@@ -89,3 +89,4 @@ void    indexing(t_stack *a)
     index_stack(a, array);
     free(array);
 }
+  

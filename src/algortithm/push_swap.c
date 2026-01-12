@@ -14,6 +14,11 @@
 
 void push_swap(t_stack *a, t_stack *b)
 {
+    int *mark;
+
+    if(is_sorted(a))
+        return ;
+    
     if (a->size == 2)
         sa(a);
     else if (a->size == 3)
@@ -21,5 +26,11 @@ void push_swap(t_stack *a, t_stack *b)
     else if (a->size <= 5)
         sort_five(a, b);
     else
-        sort_lis(a, b); 
+    {
+        mark = compute_lis(stack_to_array(a), a->size);
+        push_non_lis(a, b, mark);
+        insert_back(a, b);
+        final_rotate(a);
+        free(mark);
+    }
 }

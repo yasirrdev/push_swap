@@ -66,6 +66,7 @@ int find_lis_end(int *len, size_t size)
         }
         i++;
     }
+    return (max_index);
 }
 
 void mark_lis(int *mark, int *prev, int index)
