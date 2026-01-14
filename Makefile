@@ -3,24 +3,20 @@ NAME		= push_swap
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -Iincludes
 
-SRC			= push_swap.c \
+SRC			= main.c \
 			  src/parsing/parse.c \
-			  src/parsing/check_errors.c \
-			  src/parsing/indexing.c \
-			  src/stack/list.c \
-			  src/stack/stack_ops.c \
-			  src/stack/stack_utils.c \
-			  src/moves/moves_internal.c \
-			  src/moves/swap.c \
+			  src/utils/check_errors.c \
+			  src/utils/stack.c \
+			  src/moves/moves.c \
 			  src/moves/push.c \
-			  src/moves/rotate.c \
 			  src/moves/reverse_rotate.c \
+			  src/moves/rotate.c \
+			  src/moves/swap.c \
+			  src/algorithm/indexing.c \
 			  src/algorithm/lis.c \
-			  src/algorithm/push_non_lis.c \
-			  src/algorithm/insert_back.c \
-			  src/algorithm/final_rotate.c \
-			  src/utils/errors.c \
-			  src/utils/free.c
+			  src/algorithm/lisutils.c \
+			  src/algorithm/push_swap.c \
+			  src/algorithm/sorting.c \
 
 OBJ			= $(SRC:.c=.o)
 

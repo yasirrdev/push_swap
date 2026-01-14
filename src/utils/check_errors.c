@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 11:55:13 by ybel-maa          #+#    #+#             */
-/*   Updated: 2025/12/19 15:06:14 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 11:49:05 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	is_number(char *s)
 {

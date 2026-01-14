@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 11:56:08 by ybel-maa          #+#    #+#             */
-/*   Updated: 2025/12/22 11:56:08 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 11:52:39 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void init_lis_array(int *len, int *prev, int *mark, int size)
 {
@@ -25,7 +25,7 @@ void init_lis_array(int *len, int *prev, int *mark, int size)
     }
 }
 
-void compute_lis(int *arr, int *len, int *prev, int size)
+void lis_cpy(int *arr, int *len, int *prev, int size)
 {
     int i;
     int j;
@@ -91,7 +91,7 @@ int *compute_lis(int *arr, int size)
     if(!len || !prev || !mark)
         return (NULL);
     init_lis_array(len, prev, mark, size);
-    compute_lis(arr, len, prev, size);
+    lis_cpy(arr, len, prev, size);
     end = find_lis_end(len, size);
     mark_lis(mark, prev, end);
 

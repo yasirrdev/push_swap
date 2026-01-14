@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   lisutils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 19:31:59 by marvin            #+#    #+#             */
-/*   Updated: 2026/01/12 19:31:59 by marvin           ###   ########.fr       */
+/*   Updated: 2026/01/14 11:52:33 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void shift_mark(int *mark, int size)
 {

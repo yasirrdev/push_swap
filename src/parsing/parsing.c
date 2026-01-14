@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 11:55:13 by ybel-maa          #+#    #+#             */
-/*   Updated: 2025/12/19 13:59:58 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 11:49:21 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack *parse_args(int argc, char **argv)
 {
