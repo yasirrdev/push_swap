@@ -18,8 +18,11 @@ SRC			= main.c \
 			  swap.c \
 			  indexing.c \
 			  lis.c \
-			  lisutils.c \
+			  lis_insert.c \
+			  lis_cost.c \
 			  push_swap.c \
+			  utils.c \
+			  lisutils.c \
 			  sorting.c
 
 OBJ			= $(SRC:.c=.o)

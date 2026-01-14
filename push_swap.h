@@ -6,7 +6,7 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:10:14 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 14:50:52 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 16:34:57 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,24 +74,21 @@ void	sort_three(t_stack *a);
 void	sort_five(t_stack *a, t_stack *b);
 
 int		*compute_lis(int *arr, int size);
-int		find_pos(t_stack *a, int target);
-void	rotate_to_top(t_stack *a, int pos);
 
-int find_lis_end(int *len, size_t size);
-void mark_lis(int *mark, int *prev, int index);
-void lis_cpy(int *arr, int *len, int *prev, int size);
 
-void shift_mark(int *mark, int size);
-void push_non_lis(t_stack *a, t_stack *b, int *mark);
-int find_pos(t_stack *a, int value);
-int find_min(t_stack *a);
-
-int find_target_pos(t_stack *a, int target);
-void rotate_to_top(t_stack *a, int pos);
 void insert_back(t_stack *a, t_stack *b);
-void	final_rotate(t_stack *a);
-int	find_best_from_b(t_stack *a, t_stack *b);
+void rotate_both(t_stack *a, t_stack *b, int *pos_a, int *pos_b);
+int	get_pos(t_stack *s, int value);
+int	get_target_pos(t_stack *a, int value);
+int	get_cost(int pos, int size);
+int	ft_abs(int n);
+int	find_min(t_stack *a);
 
+void	lis_cpy(int *arr, int *len, int *prev, int size);
+int		find_lis_end(int *len, size_t size);
+void	mark_lis(int *mark, int *prev, int index);
 void	push_swap(t_stack *a, t_stack *b);
+void	final_rotate(t_stack *a);
+void push_non_lis(t_stack *a, t_stack *b, int *mark);
 
 #endif
