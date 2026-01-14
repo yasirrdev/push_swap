@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 11:55:13 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:49:21 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 15:06:22 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 t_stack *parse_args(int argc, char **argv)
 {
@@ -60,7 +60,7 @@ void parse_multiple_args(int argc, char **argv, t_stack *a)
 
     while (i > 0)
     {
-        if(!is_number(argv[i]) || !is_overflow(argv[i]) || !check_duplicates(argv[i]))
+        if(!is_number(argv[i]) || !is_overflow(argv[i]) || !check_duplicates(a))
         {
             free_stack(a);
             print_error();
@@ -70,4 +70,3 @@ void parse_multiple_args(int argc, char **argv, t_stack *a)
         i--;
     }
 }
-

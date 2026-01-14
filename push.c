@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:57:03 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:52:02 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 12:34:06 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	pa(t_stack *a, t_stack *b)
 {

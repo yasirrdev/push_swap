@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:26:27 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:52:16 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 12:00:47 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 // Esta funcion cambia los dos primeros nodos del stack.
 void	swap_internal(t_stack *s)

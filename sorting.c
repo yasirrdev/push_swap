@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:14:05 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:52:22 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 12:43:06 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void sort_three(t_stack *a)
 {
@@ -39,7 +39,7 @@ void sort_three(t_stack *a)
         rra(a);
 }
 
-int find_pos(t_stack *a, int target)
+/*int find_pos(t_stack *a, int target)
 {
     t_node *current;
     int pos;
@@ -68,7 +68,7 @@ void    rotate_to_top(t_stack *a, int pos)
         while(pos--)
             rra(a);
     }
-}
+}*/
 void push_min_to_b(t_stack *a, t_stack *b, int min)
 {
     int pos;

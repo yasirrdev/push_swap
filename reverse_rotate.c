@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/12 14:03:10 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:50:04 by ybel-maa         ###   ########.fr       */
+/*   Created: 2025/12/12 14:02:26 by ybel-maa          #+#    #+#             */
+/*   Updated: 2026/01/14 12:01:03 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	sa(t_stack *a)
+void	rra(t_stack *a)
 {
-	swap_internal(a);
-	write(1, "sa\n", "3");
+	reverse_rotate_internal(a);
+	write(1, "rra\n", 4);
 }
 
-void	sb(t_stack *b)
+void	rrb(t_stack *b)
 {
-	swap_internal(b);
-	write(1, "sb\n", 3);
+	reverse_rotate_internal(b);
+	write(1, "rrb\n", 4);
 }
 
-void	ss(t_stack *a, t_stack *b)
+void	rrr(t_stack *a, t_stack *b)
 {
-	swap_internal(a);
-	swap_internal(b);
-	ft_printf(1, "ss\n", 3);
+	reverse_rotate_internal(a);
+	reverse_rotate_internal(b);
+	write(1, "rrr\n", 4);
 }

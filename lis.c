@@ -6,11 +6,11 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 11:56:08 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 11:52:39 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/14 12:00:34 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void init_lis_array(int *len, int *prev, int *mark, int size)
 {
