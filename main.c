@@ -6,11 +6,14 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 11:20:32 by marvin            #+#    #+#             */
-/*   Updated: 2026/01/14 12:00:20 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/16 12:51:05 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
+
+
 
 int main(int argc, char **argv)
 {
@@ -28,7 +31,6 @@ int main(int argc, char **argv)
 
     b = stack_init();
     push_swap(a, b);
-
     free_stack(a);
     free_stack(b);
     return (0);

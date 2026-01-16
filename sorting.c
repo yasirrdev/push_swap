@@ -6,7 +6,7 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:14:05 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 16:36:26 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/16 12:51:15 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void sort_five(t_stack *a, t_stack *b)
     }
     sort_three(a);
     while(pushed--)
+	{
         pa(a, b);
+	
 }
-    
+}

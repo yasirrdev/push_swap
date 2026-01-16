@@ -6,7 +6,7 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:10:14 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 16:34:57 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/16 11:52:52 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,10 @@ int		find_lis_end(int *len, size_t size);
 void	mark_lis(int *mark, int *prev, int index);
 void	push_swap(t_stack *a, t_stack *b);
 void	final_rotate(t_stack *a);
-void push_non_lis(t_stack *a, t_stack *b, int *mark);
+void push_non_lis(t_stack *a, t_stack *b, int *lis, int lis_len);
+int	is_in_lis(int value, int **lis, int len);
+void	normalize_a(t_stack *a);
 
+
+void	print_stack(t_stack *stack, char name);
 #endif

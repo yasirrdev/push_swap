@@ -6,7 +6,7 @@
 /*   By: ybel-maa <ybel-maa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 11:21:43 by ybel-maa          #+#    #+#             */
-/*   Updated: 2026/01/14 12:52:54 by ybel-maa         ###   ########.fr       */
+/*   Updated: 2026/01/16 12:50:57 by ybel-maa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void push_swap(t_stack *a, t_stack *b)
 {
     int *mark;
-
+	int *arr;
+	arr = stack_to_array(a);
     if(is_sorted(a))
         return ;
-    
     if (a->size == 2)
         sa(a);
     else if (a->size == 3)
@@ -27,10 +27,11 @@ void push_swap(t_stack *a, t_stack *b)
         sort_five(a, b);
     else
     {
-        mark = compute_lis(stack_to_array(a), a->size);
-        push_non_lis(a, b, mark);
+        mark = compute_lis(arr, a->size);
+        push_non_lis(a, b, mark, a->size);
         insert_back(a, b);
-        final_rotate(a);
+		normalize_a(a);
         free(mark);
+		free(arr);
     }
 }
